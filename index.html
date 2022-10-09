@@ -3,11 +3,59 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Odin Library</title>
   </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
+  <body> 
+    <header>
+      <div class="header">
+        <h3>The Odin Library</h3>
+      </div>
+    </header>
+    <main class="container">
+      <div class="instruction">
+        <h3>Add a Book to the Library</h3>
+        <button class="open-modal" id="open-modal">Add Book</button>
+      </div>
+      <div class="book-display" id="book-display"></div>
+    </main>
+    <dialog class="modal" id="modal">
+      <div class="form">
+        <form action="#" class="add-book" method="dialog" id="form">
+          <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" name="title" id="title" required>
+          </div>
+          <div class="form-group">
+            <label for="author">Author</label>
+            <input type="text" name="author" id="author" required>
+          </div>
+          <div class="form-group">
+            <label for="genre">Genre</label>
+            <select name="genre" id="genre" required>
+              <option value="action-advention">Action and Adventure</option>
+              <option value="comedy">Comedy</option>
+              <option value="fantasy">Fantasy</option>
+              <option value="horror">Horror</option>
+              <option value="mystery">Mystery</option>
+              <option value="drama">Drama</option>
+              <option value="science-fiction">Science Fiction</option>
+              <option value="non-fiction">Non Fiction</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group" id="check-box">
+            <label for="read">I have read this book</label>
+            <input type="checkbox" name="read" id="read" value="true">
+          </div>
+          <div class="submit">
+            <button type="submit" id="submit-button" value="submit">Add Book</button>
+          </div>
+        </form>
+      </div>
+    </dialog>
+    <script  src="/main.js"></script>
   </body>
 </html>
